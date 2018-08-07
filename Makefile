@@ -295,13 +295,6 @@ install: build
 	$(INSTALL_DATA) ${srcdir}/MQTTProperties.h $(DESTDIR)${includedir}
 	$(INSTALL_DATA) ${srcdir}/MQTTReasonCodes.h $(DESTDIR)${includedir}
 	$(INSTALL_DATA) ${srcdir}/MQTTSubscribeOpts.h $(DESTDIR)${includedir}	
-	- $(INSTALL_DATA) doc/man/man1/paho_c_pub.1 $(DESTDIR)${man1dir}
-	- $(INSTALL_DATA) doc/man/man1/paho_c_sub.1 $(DESTDIR)${man1dir}
-	- $(INSTALL_DATA) doc/man/man1/paho_cs_pub.1 $(DESTDIR)${man1dir}
-	- $(INSTALL_DATA) doc/man/man1/paho_cs_sub.1 $(DESTDIR)${man1dir}
-	
-	- $(INSTALL_DATA) ${blddir}/doc/MQTTClient/man/man3/MQTTClient.h.3 $(DESTDIR)${man3dir}
-	- $(INSTALL_DATA) ${blddir}/doc/MQTTAsync/man/man3/MQTTAsync.h.3 $(DESTDIR)${man3dir}
 	
 uninstall:
 	- rm $(DESTDIR)${libdir}/${MQTTLIB_C_NAME} 
